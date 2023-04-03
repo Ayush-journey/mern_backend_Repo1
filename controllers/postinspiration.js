@@ -7,6 +7,7 @@ async function postInspiration(req, res) {
     });
     try {
         const result = await inspiration.save();
+        res.send(result);
         console.log(`Product added successfully: ${result}`)
     } catch {
         (err) => {

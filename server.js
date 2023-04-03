@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const mongodb = require('mongoose'); 
-
+const router = require('./routes/router');
 const app = express();
 app.use(express.json());
 
@@ -13,6 +13,7 @@ try{
 } catch(err){
     console.log('Unable to Connect to the Database');
 }
+app.use('/', router);
 
 app.listen(Port, ()=>{
     console.log(`Listening at ${Port}`);
