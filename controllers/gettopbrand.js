@@ -1,7 +1,7 @@
 const Topbrand = require('../modals/topbrand');
 
 async function getTopbrand(req, res) {
-    const topbrands = await Topbrand.find({}, { _id: 0 })
+    const topbrands = await Topbrand.find({}, { _id: 0, __v: 0 })
     res.send(topbrands);
 }
 

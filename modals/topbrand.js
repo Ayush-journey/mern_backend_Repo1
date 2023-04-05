@@ -1,7 +1,7 @@
-const express = require('mongoose');
+const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const topbrandInfo = new SchemaType({
+const topbrandInfo = new Schema({
     image:String,
     restaurant:String,
     time:String

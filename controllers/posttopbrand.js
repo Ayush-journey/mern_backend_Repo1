@@ -8,7 +8,7 @@ async function postTopbrand(req, res) {
     });
     try {
         const result = await topbrand.save();
-        console.log(`Product added successfully: ${result}`)
+        res.send(result);
     } catch {
         (err) => {
             res.send(err);
