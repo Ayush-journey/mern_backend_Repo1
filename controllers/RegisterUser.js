@@ -13,10 +13,11 @@ function RegisterUser(req, res) {
             password: hash
         }
         let result = new UserModal(userdata);
-        result.save().then((item) => {
+
+        result.save().then((data) => {
             return res.json({
                 message: "Registration successfull",
-                data: item
+                data: data
             })
         }).catch((err) => {
             console.log(err);
