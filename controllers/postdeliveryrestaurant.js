@@ -1,4 +1,4 @@
-const Deliveryrestaurant = require('../modals/deliveryrestaurant');
+const Deliveryrestaurant = require('./deliveryrestaurant');
 
 async function postDeliveryrestaurant(req, res) {
     const deliveryrestaurant = new Deliveryrestaurant({

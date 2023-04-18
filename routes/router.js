@@ -1,6 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
+const LoginUser = require('../controllers/LoginUser');
+const RegisterUser = require('../controllers/RegisterUser');
+
 const getinspiration = require('../controllers/getinspiration');
 const postinspiration = require('../controllers/postinspiration');
 
@@ -42,5 +45,8 @@ router.post('/postnightlifecollection', postnightlifecollection);
 
 router.get('/getnightliferestaurant', getnightliferestaurant);
 router.post('/postnightliferestaurant', postnightliferestaurant);
+
+router.post("/register", RegisterUser);
+router.post("/login", LoginUser);
 
 module.exports = router;

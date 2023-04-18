@@ -1,4 +1,4 @@
-const Deliveryrestaurant = require('../modals/deliveryrestaurant');
+const Deliveryrestaurant = require('./deliveryrestaurant');
 
 async function getDeliveryrestaurant(req, res) {
     const deliveryrestaurants = await Deliveryrestaurant.find({}, { _id: 0 })
